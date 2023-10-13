@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/script.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- aos CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper script cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- AOS script cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>verrvui</title>
+</head>
+<body>
+    <div class="wrap">
+        <section class="section banner">
+             <div class="container">
+            <div class="banner-bg">
+                <img src="./img/bg.jpg" alt="">
+            </div>
+            <!-- 모바일 버전 header -->
+            <div class="mobile-header-wrap">
+                <div class="mobileHeaderMenu">
+                    <a href="#none">menu</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                        <path d="M4.5 7.5L0.602885 0.75L8.39711 0.750001L4.5 7.5Z" fill="#F7CF59"/>
+                        </svg>
+                </div>
+                <div class="mobile-logo">
+                    <a href="#none">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="32" viewBox="0 0 86 32" fill="none">
+                            <rect x="86" width="32" height="86" transform="rotate(90 86 0)" fill="url(#pattern0)"/>
+                            <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_242_5" transform="matrix(0.0159375 0 0 0.00593023 -0.25 -0.325581)"/>
+                            </pattern>
+                            <image id="image0_242_5" width="100" height="300" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAEsCAYAAAA1nhbhAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGzGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4wLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi4wIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjMtMDgtMjNUMTY6MTc6NDQrMDk6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIzLTA4LTIzVDE2OjI0OjUyKzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIzLTA4LTIzVDE2OjI0OjUyKzA5OjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQyNzViZjg0LWFjODUtNGExZC04NmE0LWU0Yzg0NWZlMGQxOCIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjQzZGU1YmUzLTZiNGYtMTM0NS1iNjZjLTIwZTVmYjY5Mzc2ZCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOkRFRTkyRkUyNThEMjExRURCQzMwRUE0NTlGMTUzNDYzIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REVFOTJGREY1OEQyMTFFREJDMzBFQTQ1OUYxNTM0NjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REVFOTJGRTA1OEQyMTFFREJDMzBFQTQ1OUYxNTM0NjMiLz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2M2OTk1NWYtYmY2OC00Yzk0LWJjOGQtYWM2ZTVlYTc4ZTEzIiBzdEV2dDp3aGVuPSIyMDIzLTA4LTIzVDE2OjI0OjMxKzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NDI3NWJmODQtYWM4NS00YTFkLTg2YTQtZTRjODQ1ZmUwZDE4IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTIzVDE2OjI0OjUyKzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7YgSHDAAAQlElEQVR4nO2deZBcVRWHv8kyIYGRnQCyGygg7CSCrLKFBGQRAoigoGBZiEKVirILiljGBSkQgUJBtogUoCHAkIUtQFhlEU1AtpBAWANJIJMMM2n/+L1munt6el4v0+dk+nxVU9MTuvtd+ut313PPbcpkMgR+GGBdgCCfEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMQVYXXtza/BRwEfAPqzL0wL3AhJax7dMtLm55h4wENjS8fk/sAbRYXdxSyKfAOKDZsAyFHAgMQ2UzwazKShgHXAvcCswBFgLL6lyGYcAawGjgLAxlgL0QgK8nP1k663z9gQV/N7yQQgo/oIYiur3O8HKHLAbeBpbU+boD6WpDVqvztYtiLaQDOAO4BvjYsBzDUKM+AdjZsBzmQm4ALgWsz+5bAjyIxiDtQJNVQazbkJnYy8jlU1R1mo2NLIV0Uv8xRxquAl6xurhllTXQ+Po9cYHlxa2rrO2Mr+8OayHfA84BVjEuhxusq4zBaAr+VNTLWYga1lpNnywDPgEWAR8Ac4F5wKvA8hpdo6ZYC8myHvC1Ol7vY/QFmATchmS5oMnq+O7Frc2L0LrDC8AV6Ju7EI0DavXtHYwGfS3AWsDmwD7kD/4WApcB5+W+sGVse42KUB7Wd8iTwH5o6qSerAp8CbVhhwDnArsB3wLeqHNZ8rBs1AcCN1N/GaC7ohU4DDgJWArsCzwDbGJQns+wFLIcmG94fdAswV+Abyd/r4EWy8w+F0sh2wKTDa+fy0TgD8njnYATrQpiKeR11CX1wqXojh0AHGlVCOuBoSdeBx5LHo+yKkQIyefu5Pc6VgUIIflYdzJCSAHrWhcghOQzJvlttmhmKWRNfEUtbgF8OXn8P6tCWAqZDRxqeP1cBqABYrYxf9CyIFYMAzYwvH6W7YGHgN2Tv9uB260KYzm52AmcDjwLPFDH6w4GtkYzvocDB5EfLXk3mucywXq2dxPgfuAlVG+/hyb6atWoNgFDUFu1GjAcbYEY3sPzXwOOqtG1K8JaSJYtkh9LWtEkY4dlIRq925sBHgVOQFsjzAeGXu6QetGJqsX/orbrHmCaZYEK8SDkZeCu5PcC1IbUggzqMYFmlRcC7yY/pntASmEpJAPMQL0cy0BrV1iPQ+4nZORh3ajvg8QECZZClgB7An/CwSyrFyyFZPdgfBPNa12O9md46GiYYV1lZVkVhZPOQPszbgD2B1a2LJQFHr6NGTS59zGKLNwCOD75AZiORtHTgH9T/23TdcVaSBsaIWenu5tQezIKRTR+Jfm9X/LfPwSmognAmWgOrF9hGdvbDtyBkgaU+tZvCRyM5BS2MU8A/0R3zzPUcMBnFdtrKeRsNA6ZWcbLWtDdMwY4gPyg6cUok88UVAW+WE35GlFILd5mHWAX4DjgCLTWkeV94DkUlTgJzWGlxkqIl15WpbwL3In2lqwG7A1cCDyOth/shKq8IUblK5sV/Q4pxVDSLXatinZY5T2vUfeH9CVtJf7bdmiWYByKNJmK2p+ZwPMYhgH1ZyG5rIYEjAX2ArYp+O+HJz+g8dDLwI71KVo+/VnImmhDztEooiTtTt9m4KM+KlOv9CchA9G3OjuQ3J10M8mfAE+h1cMZqENgNhuwogtZB1VFByIJm5Iuccxs4BEk4UHURXaBpZBDUQP6epmvWx99+HsBx5JuAjKD1tGnorkxLzu3umEp5Ba0jeysXp7XjMYTY+kanacZV3yIqqB7kYSX8JV5qCiWQjpQl3Nlum9tG4pWE49C0yTrp3zP+WigeDsK77HY4VsV1kEOuwI3oaiTDLARsEPy72uneI9laHpkCppgnElXpMkKiYdG/bDkJy1zgftQYzwVZYCoJVsn77moxu+bCg9CeiODkixPQQtVk+nbuKoX0CBxUh9eo0e8CvkYNcgPIQkvUJ+Y211Rt9ksU5AnIYvRSuBEJGNBna8/APg5Et/Qc1mLgDNRN7jeEnL5CepWN3Sq8QVoWXaWYRlWR3fG9w3L8BmWQoYAf6e4jOHAZujDakLd2zdRJrhaZjI9EA1Otyz4d7OFO0shf0bZ3LKsgfZpjEcj85UKnp9BMVuPog2aU6i8oR8HnIZG/8Uwa9S9rBiOQcFx5aS0eBJ9sOWk59sfOB9NSBZjKXA2cGXL2PZSC1x9hoc19R+g+aZy84uMRslietsKNxCFELWigWQxGQtQdtRNgEsovdrYp1g36gcBv6ni9SPQDt7N6L7RpxlVfz9CVWAx5gC/A65HG3rMsRZyLvkztxkUT9WKAt/mofHJILSnfRsUWbJ3zmvWQ6canJb8PRiJPoOuveeFvIeOWjofZ+nOLduQEeSnsJiFpuLvpPdGdTckIfuBL0FzUGNQ97WnjNlvAFejZGUlNwo1YtTJsTmP/4MWnNIODB9F45fJKMx0KFrs+lwPz/8I3Y1X43h/Idg26qNzHo+nslH6d9CKYxPFZbwJ/Bg11n/EuQywFfKF5PcdaI27EuajXlEhs1FO3q1Qo11Ogz2ABj3QZb3k990ln9U71+Y8novGEaPQVrlKVgwfoitvVt2xnjqB6o/JW4zGDQPQamO1E5QjUZtkgvUJO6CU39UyDwmuto3YGUU5NuzRq9A1n7RWha9/ny65a5I+0j2DBo/DktftCfyUBp9+B83sLqHyhjSDJHRS/jT+ILp/Bg0vBGpXZ6/wx7Z6mFwMcvByh7SjtY7FyeN6VBvZU+KGooWwNHFgfY61kDY09zQZTfhZBRcMQTPCP0NjELPPxbrKugat/r2LbdztMhT1eA7qXDTk+SFDULyVJ062LoClkEtQmj0vHIOSYNby2L6ysWxDzjS8diHHozV9UKeiIYWUogmNnldHvaE21Aur9erepmgJ+fCCa5vN9noTMg4dN7QbWifPToNkUC9sNgoz/SvVJczfDKWDOpXiUy0NGZeVy0bAlUhIMZpQVMo6aGXxdBTgdj7l9c7WRWcVXkh+Go5cWtGeExOsu72gycUX6FlGMVZBS7KzSZfQf3PUiXgVuJjiMm5Cd+ahKBrFBOs7ZHsUZN1S4evfo/T81efRiuH4Hp6XQeGsF6M1eXOshZxH97XwxWjL8jN0TacMRtVNNgyoFZ2f+3gP7zsSzQAcT/GEAR1opXJCci03WApZm/zzAhcBv0Qj91L7xlei5+zXe6L4rMMoXi0tRfHEv0KRLu6wFDI+5/EHKBL96RSvKybji8AP6blqWo7ivS7A12C0G5ZC9s15fDzpZBQyDA3ovkrxsUMH6iJfghIHxD71EmSDpB+j8hNt2lBVV0zGRNRGvVLhe5vgIQzoxireI4OqoSwdqPs6CiXXrETGZagKNMHyDsnmKFlS5fvMQW1EB1rTqLaxPhol53yiyvepCOvz1KE2BwG/jiJI3qjyfVrQbIBZNghLIdkGthZRgtUcAjMAbac7GC1SNfy26BEohXilZelI3qMTJSIrd39gCxKSjXyJMCC650CsFOuT3qrGw+RikIOXOwRUby+lvucINqGpGDefg4eCTEAJ9eejQV49ezhNaLS/Ohp7nAdsXMfrd8NayES0r9Bsoz76EryN4oJbk8dmWLYhzWg51lJGIe+giU6zc94thUyl/vNMQ+k9gOEuFLhngmWVdYjBNU9Bc1yPoAWqB+k+qDyh3oXKxboNKUYTWuVrRtvTajlq/huaQzsJLWRlTxt9GG21fo7a53AsC8vEAdej7WNDUU9nBJpHWooa2ruA79J3I+ct0TpJbkagTuBfwCktY9srWZ+pGss75BjyG8/30fLt46htmUXfTmPMRik49kM7dkfQlT9+AypbMKsaSyHL6BLyaxR5XiqE80ZU3k9R4MPb5I9ZMqiqWxcN9pqR3N+XeM8Myvc7EgnaNPk3s0PuPbQhb5EuzncpynC9Aapuegp0W4I+3Hmkv8Pa0f72iSmf32d4EJI2PVPuVoEBKCjiLrq6sbNQD+rZCsvxNKo2V63w9TXBw+TisxW8Zjk6auK3yd8d6C6r5L2yLEAJ/E3xIKSa7G3Tk9/tlHceYjHacZA33oOQaqrN7NmEGarP1e4iRMjD8d1e9pab7QnJxfoOuQ3bJMrusOxl7UR1m25qzXIcVFuWd4gnGaBxjfkwwLrK8sRolArQFOtvxI5oS0KlDfvw5Hcz8Asq2z2bQZOc30BTLg0bBnQz+ZlJq2EwytO7wmNZZR3Z+1MaD0shrjJKe8G6DQGdOdiKZn2zYUD16H5mM9ENQekF9wBOJH2KwD7B+hzD6cBxVBcsXStuQZuHqtmvUjXWYUD34ENGlpvQHdqQ+bKa0UKTizmkHObRoJmt29BmT2+9rb3RcUomWCdSXgm4FcX2jsHH3TKP6rfZVYyH6XdQfpF7UVzUGWjisSGndTx0e6ErvndbFA0POvNjKlo3n4nOQ+/3ePgWXoryV60P7IKCGe5D80tHAdehY5DmJM/dFT9fpJpjGbnYhoIS9qf7AfegvX+jUdsyBk1EZmlDd88kFAI6mxoPJq2OPLIU8ig6He3KlC9ZF42m9weOID/x8XyUy2QaitOdX235GlFItW8xCmX9OQBVdVk6UZU3Ce3KnYPircqaVg8h1bEmyga3HzpEMnucUgadwHMR8Fo5bxhCasvG6A56FXgZHZFX1v9oIx6b15fMoXTexCYUI3wAOvPwGVTNze37opWmvwopxkoo49xeKOHmtuRvh2hHiWseRrm10nY2akp/rbKytCAB+6Ke2SapXzi23WQapz/eIVshAQcgGauneM1ytJdkBlose7LPStcL/UXIDihqZAzp86a0o+rpOrQJ9NW+KFi5WArJhtxUErqT7eYehO6CrVO+7hUk4e7k91sVXLtPsRQyCyU5vjzl80ehqmgf1DivXPrpgKbRZ6Ae1AOoKjIPFy2FpZDh6Nt9BcWzOQxCVdHY5Kens9ELWYi+/dNQMLd5V7YcLIV0oHWQk9E8VAbYEI0L9kR3woakW7R6HgVMTEPtQTmHEbvCstu7iK6c751ISNovyKcoC93V6DDhmm9paPSReprY3jdRO/AAWvOei/P2oBK8CClGO8qqcA9d6S/cH1BfLd6EtKFgtakoovFF2+LUHy9C7kMDtCkoZ1XD4kHIaSi9d4BtkMMgdEdcZVgGd1gKeQeF+Jhv1veE2TgkKI6HuKwghxDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijP8DGytazZKR/dQAAAAASUVORK5CYII="/>
+                            </defs>
+                            </svg>
+                    </a>
+                </div>
+                <div class="mobileHeaderCart">
+                    <a href="#none">Cart</a>
+                </div>
+                    </div>
+            <header class="header">
+                <div class="header-ul-wrap">
+                    <ul class="header-left">
+                        <div class="left-logo">
+                            <a href="#none">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="32" viewBox="0 0 86 32" fill="none">
+                                    <rect x="86" width="32" height="86" transform="rotate(90 86 0)" fill="url(#pattern0)"/>
+                                    <defs>
+                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_242_5" transform="matrix(0.0159375 0 0 0.00593023 -0.25 -0.325581)"/>
+                                    </pattern>
+                                    <image id="image0_242_5" width="100" height="300" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAEsCAYAAAA1nhbhAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGzGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4wLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi4wIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjMtMDgtMjNUMTY6MTc6NDQrMDk6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIzLTA4LTIzVDE2OjI0OjUyKzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIzLTA4LTIzVDE2OjI0OjUyKzA5OjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQyNzViZjg0LWFjODUtNGExZC04NmE0LWU0Yzg0NWZlMGQxOCIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjQzZGU1YmUzLTZiNGYtMTM0NS1iNjZjLTIwZTVmYjY5Mzc2ZCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOkRFRTkyRkUyNThEMjExRURCQzMwRUE0NTlGMTUzNDYzIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REVFOTJGREY1OEQyMTFFREJDMzBFQTQ1OUYxNTM0NjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REVFOTJGRTA1OEQyMTFFREJDMzBFQTQ1OUYxNTM0NjMiLz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Y2M2OTk1NWYtYmY2OC00Yzk0LWJjOGQtYWM2ZTVlYTc4ZTEzIiBzdEV2dDp3aGVuPSIyMDIzLTA4LTIzVDE2OjI0OjMxKzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NDI3NWJmODQtYWM4NS00YTFkLTg2YTQtZTRjODQ1ZmUwZDE4IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTIzVDE2OjI0OjUyKzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7YgSHDAAAQlElEQVR4nO2deZBcVRWHv8kyIYGRnQCyGygg7CSCrLKFBGQRAoigoGBZiEKVirILiljGBSkQgUJBtogUoCHAkIUtQFhlEU1AtpBAWANJIJMMM2n/+L1munt6el4v0+dk+nxVU9MTuvtd+ut313PPbcpkMgR+GGBdgCCfEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMEOKMQVYXXtza/BRwEfAPqzL0wL3AhJax7dMtLm55h4wENjS8fk/sAbRYXdxSyKfAOKDZsAyFHAgMQ2UzwazKShgHXAvcCswBFgLL6lyGYcAawGjgLAxlgL0QgK8nP1k663z9gQV/N7yQQgo/oIYiur3O8HKHLAbeBpbU+boD6WpDVqvztYtiLaQDOAO4BvjYsBzDUKM+AdjZsBzmQm4ALgWsz+5bAjyIxiDtQJNVQazbkJnYy8jlU1R1mo2NLIV0Uv8xRxquAl6xurhllTXQ+Po9cYHlxa2rrO2Mr+8OayHfA84BVjEuhxusq4zBaAr+VNTLWYga1lpNnywDPgEWAR8Ac4F5wKvA8hpdo6ZYC8myHvC1Ol7vY/QFmATchmS5oMnq+O7Frc2L0LrDC8AV6Ju7EI0DavXtHYwGfS3AWsDmwD7kD/4WApcB5+W+sGVse42KUB7Wd8iTwH5o6qSerAp8CbVhhwDnArsB3wLeqHNZ8rBs1AcCN1N/GaC7ohU4DDgJWArsCzwDbGJQns+wFLIcmG94fdAswV+Abyd/r4EWy8w+F0sh2wKTDa+fy0TgD8njnYATrQpiKeR11CX1wqXojh0AHGlVCOuBoSdeBx5LHo+yKkQIyefu5Pc6VgUIIflYdzJCSAHrWhcghOQzJvlttmhmKWRNfEUtbgF8OXn8P6tCWAqZDRxqeP1cBqABYrYxf9CyIFYMAzYwvH6W7YGHgN2Tv9uB260KYzm52AmcDjwLPFDH6w4GtkYzvocDB5EfLXk3mucywXq2dxPgfuAlVG+/hyb6atWoNgFDUFu1GjAcbYEY3sPzXwOOqtG1K8JaSJYtkh9LWtEkY4dlIRq925sBHgVOQFsjzAeGXu6QetGJqsX/orbrHmCaZYEK8SDkZeCu5PcC1IbUggzqMYFmlRcC7yY/pntASmEpJAPMQL0cy0BrV1iPQ+4nZORh3ajvg8QECZZClgB7An/CwSyrFyyFZPdgfBPNa12O9md46GiYYV1lZVkVhZPOQPszbgD2B1a2LJQFHr6NGTS59zGKLNwCOD75AZiORtHTgH9T/23TdcVaSBsaIWenu5tQezIKRTR+Jfm9X/LfPwSmognAmWgOrF9hGdvbDtyBkgaU+tZvCRyM5BS2MU8A/0R3zzPUcMBnFdtrKeRsNA6ZWcbLWtDdMwY4gPyg6cUok88UVAW+WE35GlFILd5mHWAX4DjgCLTWkeV94DkUlTgJzWGlxkqIl15WpbwL3In2lqwG7A1cCDyOth/shKq8IUblK5sV/Q4pxVDSLXatinZY5T2vUfeH9CVtJf7bdmiWYByKNJmK2p+ZwPMYhgH1ZyG5rIYEjAX2ArYp+O+HJz+g8dDLwI71KVo+/VnImmhDztEooiTtTt9m4KM+KlOv9CchA9G3OjuQ3J10M8mfAE+h1cMZqENgNhuwogtZB1VFByIJm5Iuccxs4BEk4UHURXaBpZBDUQP6epmvWx99+HsBx5JuAjKD1tGnorkxLzu3umEp5Ba0jeysXp7XjMYTY+kanacZV3yIqqB7kYSX8JV5qCiWQjpQl3Nlum9tG4pWE49C0yTrp3zP+WigeDsK77HY4VsV1kEOuwI3oaiTDLARsEPy72uneI9laHpkCppgnElXpMkKiYdG/bDkJy1zgftQYzwVZYCoJVsn77moxu+bCg9CeiODkixPQQtVk+nbuKoX0CBxUh9eo0e8CvkYNcgPIQkvUJ+Y211Rt9ksU5AnIYvRSuBEJGNBna8/APg5Et/Qc1mLgDNRN7jeEnL5CepWN3Sq8QVoWXaWYRlWR3fG9w3L8BmWQoYAf6e4jOHAZujDakLd2zdRJrhaZjI9EA1Otyz4d7OFO0shf0bZ3LKsgfZpjEcj85UKnp9BMVuPog2aU6i8oR8HnIZG/8Uwa9S9rBiOQcFx5aS0eBJ9sOWk59sfOB9NSBZjKXA2cGXL2PZSC1x9hoc19R+g+aZy84uMRslietsKNxCFELWigWQxGQtQdtRNgEsovdrYp1g36gcBv6ni9SPQDt7N6L7RpxlVfz9CVWAx5gC/A65HG3rMsRZyLvkztxkUT9WKAt/mofHJILSnfRsUWbJ3zmvWQ6canJb8PRiJPoOuveeFvIeOWjofZ+nOLduQEeSnsJiFpuLvpPdGdTckIfuBL0FzUGNQ97WnjNlvAFejZGUlNwo1YtTJsTmP/4MWnNIODB9F45fJKMx0KFrs+lwPz/8I3Y1X43h/Idg26qNzHo+nslH6d9CKYxPFZbwJ/Bg11n/EuQywFfKF5PcdaI27EuajXlEhs1FO3q1Qo11Ogz2ABj3QZb3k990ln9U71+Y8novGEaPQVrlKVgwfoitvVt2xnjqB6o/JW4zGDQPQamO1E5QjUZtkgvUJO6CU39UyDwmuto3YGUU5NuzRq9A1n7RWha9/ny65a5I+0j2DBo/DktftCfyUBp9+B83sLqHyhjSDJHRS/jT+ILp/Bg0vBGpXZ6/wx7Z6mFwMcvByh7SjtY7FyeN6VBvZU+KGooWwNHFgfY61kDY09zQZTfhZBRcMQTPCP0NjELPPxbrKugat/r2LbdztMhT1eA7qXDTk+SFDULyVJ062LoClkEtQmj0vHIOSYNby2L6ysWxDzjS8diHHozV9UKeiIYWUogmNnldHvaE21Aur9erepmgJ+fCCa5vN9noTMg4dN7QbWifPToNkUC9sNgoz/SvVJczfDKWDOpXiUy0NGZeVy0bAlUhIMZpQVMo6aGXxdBTgdj7l9c7WRWcVXkh+Go5cWtGeExOsu72gycUX6FlGMVZBS7KzSZfQf3PUiXgVuJjiMm5Cd+ahKBrFBOs7ZHsUZN1S4evfo/T81efRiuH4Hp6XQeGsF6M1eXOshZxH97XwxWjL8jN0TacMRtVNNgyoFZ2f+3gP7zsSzQAcT/GEAR1opXJCci03WApZm/zzAhcBv0Qj91L7xlei5+zXe6L4rMMoXi0tRfHEv0KRLu6wFDI+5/EHKBL96RSvKybji8AP6blqWo7ivS7A12C0G5ZC9s15fDzpZBQyDA3ovkrxsUMH6iJfghIHxD71EmSDpB+j8hNt2lBVV0zGRNRGvVLhe5vgIQzoxireI4OqoSwdqPs6CiXXrETGZagKNMHyDsnmKFlS5fvMQW1EB1rTqLaxPhol53yiyvepCOvz1KE2BwG/jiJI3qjyfVrQbIBZNghLIdkGthZRgtUcAjMAbac7GC1SNfy26BEohXilZelI3qMTJSIrd39gCxKSjXyJMCC650CsFOuT3qrGw+RikIOXOwRUby+lvucINqGpGDefg4eCTEAJ9eejQV49ezhNaLS/Ohp7nAdsXMfrd8NayES0r9Bsoz76EryN4oJbk8dmWLYhzWg51lJGIe+giU6zc94thUyl/vNMQ+k9gOEuFLhngmWVdYjBNU9Bc1yPoAWqB+k+qDyh3oXKxboNKUYTWuVrRtvTajlq/huaQzsJLWRlTxt9GG21fo7a53AsC8vEAdej7WNDUU9nBJpHWooa2ruA79J3I+ct0TpJbkagTuBfwCktY9srWZ+pGss75BjyG8/30fLt46htmUXfTmPMRik49kM7dkfQlT9+AypbMKsaSyHL6BLyaxR5XiqE80ZU3k9R4MPb5I9ZMqiqWxcN9pqR3N+XeM8Myvc7EgnaNPk3s0PuPbQhb5EuzncpynC9Aapuegp0W4I+3Hmkv8Pa0f72iSmf32d4EJI2PVPuVoEBKCjiLrq6sbNQD+rZCsvxNKo2V63w9TXBw+TisxW8Zjk6auK3yd8d6C6r5L2yLEAJ/E3xIKSa7G3Tk9/tlHceYjHacZA33oOQaqrN7NmEGarP1e4iRMjD8d1e9pab7QnJxfoOuQ3bJMrusOxl7UR1m25qzXIcVFuWd4gnGaBxjfkwwLrK8sRolArQFOtvxI5oS0KlDfvw5Hcz8Asq2z2bQZOc30BTLg0bBnQz+ZlJq2EwytO7wmNZZR3Z+1MaD0shrjJKe8G6DQGdOdiKZn2zYUD16H5mM9ENQekF9wBOJH2KwD7B+hzD6cBxVBcsXStuQZuHqtmvUjXWYUD34ENGlpvQHdqQ+bKa0UKTizmkHObRoJmt29BmT2+9rb3RcUomWCdSXgm4FcX2jsHH3TKP6rfZVYyH6XdQfpF7UVzUGWjisSGndTx0e6ErvndbFA0POvNjKlo3n4nOQ+/3ePgWXoryV60P7IKCGe5D80tHAdehY5DmJM/dFT9fpJpjGbnYhoIS9qf7AfegvX+jUdsyBk1EZmlDd88kFAI6mxoPJq2OPLIU8ig6He3KlC9ZF42m9weOID/x8XyUy2QaitOdX235GlFItW8xCmX9OQBVdVk6UZU3Ce3KnYPircqaVg8h1bEmyga3HzpEMnucUgadwHMR8Fo5bxhCasvG6A56FXgZHZFX1v9oIx6b15fMoXTexCYUI3wAOvPwGVTNze37opWmvwopxkoo49xeKOHmtuRvh2hHiWseRrm10nY2akp/rbKytCAB+6Ke2SapXzi23WQapz/eIVshAQcgGauneM1ytJdkBlose7LPStcL/UXIDihqZAzp86a0o+rpOrQJ9NW+KFi5WArJhtxUErqT7eYehO6CrVO+7hUk4e7k91sVXLtPsRQyCyU5vjzl80ehqmgf1DivXPrpgKbRZ6Ae1AOoKjIPFy2FpZDh6Nt9BcWzOQxCVdHY5Kens9ELWYi+/dNQMLd5V7YcLIV0oHWQk9E8VAbYEI0L9kR3woakW7R6HgVMTEPtQTmHEbvCstu7iK6c751ISNovyKcoC93V6DDhmm9paPSReprY3jdRO/AAWvOei/P2oBK8CClGO8qqcA9d6S/cH1BfLd6EtKFgtakoovFF2+LUHy9C7kMDtCkoZ1XD4kHIaSi9d4BtkMMgdEdcZVgGd1gKeQeF+Jhv1veE2TgkKI6HuKwghxDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijBDijP8DGytazZKR/dQAAAAASUVORK5CYII="/>
+                                    </defs>
+                                    </svg>
+                            </a>
+                        </div>
+
+                        <li>
+                            <a href="#none">Brand story</a>
+                        </li>
+                        <li>
+                            <a href="#none">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#none">Community</a>
+                        </li>
+                        <li>
+                            <a href="#none">Event</a>
+                        </li>
+                    </ul>
+                    <ul class="header-right">
+                        <li>
+                            <a href="#none">Login</a>
+                        </li>
+                        <li>
+                            <a href="#none">Cart</a>
+                        </li>
+                        <li>
+                            <a href="#none">My page</a>
+                        </li>
+                    </ul>
+                    <ul class="header-sns">
+                        <li class="instagram">
+                            <a href="#none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path d="M11.0025 5.35948C7.88098 5.35948 5.36319 7.87783 5.36319 11C5.36319 14.1222 7.88098 16.6405 11.0025 16.6405C14.1239 16.6405 16.6417 14.1222 16.6417 11C16.6417 7.87783 14.1239 5.35948 11.0025 5.35948ZM11.0025 14.6671C8.98528 14.6671 7.3362 13.0225 7.3362 11C7.3362 8.97746 8.98037 7.33292 11.0025 7.33292C13.0245 7.33292 14.6687 8.97746 14.6687 11C14.6687 13.0225 13.0196 14.6671 11.0025 14.6671ZM18.1877 5.12875C18.1877 5.8602 17.5988 6.44438 16.8724 6.44438C16.1411 6.44438 15.5571 5.85529 15.5571 5.12875C15.5571 4.40221 16.146 3.81312 16.8724 3.81312C17.5988 3.81312 18.1877 4.40221 18.1877 5.12875ZM21.9227 6.46402C21.8393 4.70166 21.4368 3.14058 20.146 1.8544C18.8601 0.568225 17.2994 0.165681 15.5374 0.0773179C13.7215 -0.0257726 8.27853 -0.0257726 6.46258 0.0773179C4.70552 0.160772 3.14479 0.563316 1.85399 1.84949C0.56319 3.13567 0.165644 4.69675 0.0773006 6.45911C-0.0257669 8.27547 -0.0257669 13.7196 0.0773006 15.536C0.160736 17.2983 0.56319 18.8594 1.85399 20.1456C3.14479 21.4318 4.70061 21.8343 6.46258 21.9227C8.27853 22.0258 13.7215 22.0258 15.5374 21.9227C17.2994 21.8392 18.8601 21.4367 20.146 20.1456C21.4319 18.8594 21.8344 17.2983 21.9227 15.536C22.0258 13.7196 22.0258 8.28037 21.9227 6.46402ZM19.5767 17.4849C19.1939 18.4471 18.4528 19.1883 17.4859 19.5761C16.038 20.1505 12.6025 20.018 11.0025 20.018C9.40245 20.018 5.96196 20.1456 4.51902 19.5761C3.55705 19.1932 2.81595 18.452 2.42822 17.4849C1.85399 16.0367 1.9865 12.6004 1.9865 11C1.9865 9.39964 1.8589 5.95838 2.42822 4.51512C2.81104 3.55294 3.55215 2.81167 4.51902 2.42385C5.96687 1.84949 9.40245 1.98204 11.0025 1.98204C12.6025 1.98204 16.0429 1.8544 17.4859 2.42385C18.4479 2.80676 19.189 3.54803 19.5767 4.51512C20.1509 5.96329 20.0184 9.39964 20.0184 11C20.0184 12.6004 20.1509 16.0416 19.5767 17.4849Z" fill="#F7CF59"/>
+                                    </svg>
+                            </a>
+                        </li>
+                        <li class="kakao">
+                            <a href="#none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2143 18.5287C18.0714 18.5287 22 14.3809 22 9.26435C22 4.14779 18.0714 0 10.2143 0C4.57309 0 0 4.14779 0 9.26435C0 12.1582 1.46292 14.7422 3.75459 16.4411L3.67334 22L7.95327 18.3009C8.68057 18.45 9.4373 18.5287 10.2143 18.5287Z" fill="#F7CF59"/>
+                                    </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="banner-txt">
+                <span>My New Space Every Day</span>
+                <P>나의 일상속 공간을 매일 새롭게, 다채로운 향으로 물들이다.</P>
+            </div>
+           
+            <div class="sec1-top" data-aos="fade-up" data-aos-duration="2000">
+                <span>NEW PROMOTION</span>
+                <P class="sec1-subtitle">매일 새로운 공간으로 만들어주는 멀티 프래그런스 3+1</P>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2" height="80" viewBox="0 0 2 80" fill="none">
+                    <line x1="1" y1="4.37114e-08" x2="0.999996" y2="80" stroke="#F9FCF8" stroke-width="2"/>
+                    </svg>
+                    <p class="sec1-top-bottom-txt">
+                       <span class="yellow-txt"> 99.9% 항균</span> 탈취효과로 불쾌함은 없애주고<br>
+                        자연 그대로의 향기만 남겨주는 <span class="yellow-txt">멀티 프래그런스</span><br>
+                        나만의 향기로 가득 채워보세요.
+                    </p>
+            </div>
+            <div class="sec-1-bottom">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./img/sec1-swiper1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/sec1-swiper2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/sec1-swiper3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/sec1-swiper4.png" />
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+                </div>
+        </section>
+        <section class="section sec-2">
+            <div class="container">
+                <div class="sec2-top align">
+                    <div class="sec2-top-left box">
+                    <img src="./img/sec2-first.jpg" alt="">
+                </div>
+                <div class="sec2-top-right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="txt-wrap">
+                    <span> TIME TO FOCUS SOLELY ON ME</span>
+                    <P>사람들에게는 저마다의 감정서랍이 있습니다.<br>
+                        시간이 지나면 상황에 대한 기억은 흐릿해질지라도,<br>
+                        그때 느낀 감정은 고스란히 남아있습니다.<br>
+                        감정을 누르지 않고 자연스레 흘려 보내는 것.<br>
+                        타인의 시선, 평가에 휘둘리지 않고<br>
+                        나의 결을 견고하게 만드는 것<br>
+                        오롯이 나에게 집중하는 시간에서부터<br>
+                        베르뷔는 시작합니다.</P>
+                        </div>
+                </div>
+                </div>
+                <div class="sec2-mid align">
+                    <div class="sec2-mid-left"  data-aos="fade-right" data-aos-duration="1000">
+                        <div class="txt-wrap">
+                        <span>OUR NAME</span>
+                        <P>‘초록빛’의[vεːʀ]. 베르<br>
+                            ‘비’의 옛말. 뷔.<br>
+                            베르뷔는 순수한 본연의 것으로 빚어내어<br>
+                            있는 그대로의 나를 자연스럽게<br>
+                            마주할 수 있는 시간을 만들어줍니다</P>
+                        </div>
+                    </div>
+                    <div class="sec2-mid-right box">
+                        <img src="./img/sec2-sec.png" alt="">
+                    </div>
+                </div>
+                <div class="sec2-btm align">
+                    <div class="sec2-btm-left box">
+                    <img src="./img/sec2-third.png" alt="">
+                </div>
+                <div class="sec2-btm-right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="txt-wrap">
+                    <span>OUR PRODUCT</span>
+                    <P>모든 제품은 미네랄 오일, 파라벤, 벤조페논 등<br>
+                        20가지 주의성분을 첨가하지 않는 최상의 케미스트리로<br>
+                        민감한 피부에도 안심하고 사용할 수 있습니다.<br>
+                        베르뷔는 인공적인 향료에 지친. 현대인들을 위해<br>
+                        자연유래 성분으로 자연스러운 향을 추구합니다.<br>
+                        자연에서 오는 본연의 향으로 우리의 지친 몸을 감싸줍니다.</P>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="section sec-3">
+            <div class="container">
+                <div class="sec3-left">
+                    <img src="./img/sec3-left.jpeg" alt="">
+                </div>
+                <div class="sec3-right">
+                    <div class="a-wrap">
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                            <img src="./img/sec3-right-1.jpg" alt="">
+                        </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 퍼퓸 바디 트리트먼트 500ml</div>
+                                <div class="price-box">
+                                    <div class="cost">53,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                                        <path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">42,800원</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                            <img src="./img/sec3-right-2.png" alt="">
+                        </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 곤약 스크럽 바디워시 & 바디트리트먼트 세트</div>
+                                <div class="price-box">
+                                    <div class="cost">93,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+<path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">69,800원</div>
+                                </div>
+                            </div>
+                        </div>
+         
+                    </a>
+                    </div>
+                     <div class="a-wrap">
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                            <img src="./img/sec3-right-3.jpg" alt="">
+                        </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 곤약 스크럽 바디워시 500ml (향료free)</div>
+                                <div class="price-box">
+                                    <div class="cost">40,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+<path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">32,800원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                            <img src="./img/sec3-right-4.jpg" alt="">
+                        </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 퍼퓸 곤약 스크럽 바디워시 500ml</div>
+                                <div class="price-box">
+                                    <div class="cost">40,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+<path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">32,800원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="a-wrap">
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                            <img src="./img/sec3-right-5.jpeg" alt="">
+                        </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 트리오 세트</div>
+                                <div class="price-box">
+                                    <div class="cost">138000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+<path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">102,800원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                            <img src="./img/sec3-right-6.png" alt="">
+                        </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 멀티프래그런스 50ml</div>
+                                <div class="price-box">
+                                    <div class="cost">45,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+<path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                        </svg>
+                                </div>
+                                    <div class="sale-price">34,800원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="a-wrap">
+                    <a href="#none">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                                <img src="./img/sec3-right-7.png" alt="">
+                            </div>          
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 멀티프래그런스 듀오 세트 50+50ml</div>
+                                <div class="price-box">
+                                    <div class="cost">90,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+<path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">67,800원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#none" class="last">
+                        <div class="right-box box">
+                            <div class="img-wrap">
+                                <img src="./img/sec3-right-8.jpeg" alt="">
+                            </div>
+                            <div class="txt-wrap">
+                                <div class="name">베르뷔 퍼퓸 바디 트리트먼트 500ml</div>
+                                <div class="price-box">
+                                    <div class="cost">53,000원</div>
+                                    <div class="angle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none">
+                                    <path d="M9.63386 9.90773C10.122 9.40567 10.122 8.59032 9.63386 8.08825L2.13533 0.376547C1.64714 -0.125517 0.854325 -0.125517 0.366139 0.376547C-0.122046 0.878611 -0.122046 1.69396 0.366139 2.19603L6.98203 9L0.370045 15.804C-0.118141 16.306 -0.118141 17.1214 0.370045 17.6235C0.858231 18.1255 1.65104 18.1255 2.13923 17.6235L9.63777 9.91175L9.63386 9.90773Z" fill="#F9FCF8"/>
+                                    </svg>
+                                </div>
+                                    <div class="sale-price">42,800원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section sec-4">
+            <div class="container">
+                <div class="sec4-left">
+                    <div class="img-wrap">
+                        <img src="./img/sec4-left.png" alt="">
+                    </div>
+                </div>
+                <div class="sec4-right">
+                    <div class="sec4-right-top">
+                        <span>multi fragrance
+                            verrvui</span>
+                    </div>
+                    <div class="sec4-right-bottom">
+                        <div class="bottom-txt">
+                            <p>나의 일상속 공간을 매일 새롭게,<br>
+                                다채로운 향으로 물들이다.<br>
+                                베르뷔가 선보이는 다양한 제품들을 지금 만나보세요.</p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="https://verrvui.com/product/list.html?cate_no=44" target="_blank">
+                                <span>GO NOW</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section sec-5">
+            <div class="container">
+                <div class="sec5-top">
+                    <span class="sec5-title">
+                        product use review
+                    </span>
+                    <p>베르뷔 제품 사용 리얼리뷰를 확인해보세요</p>
+                </div>
+                <div class="sec5-mid">
+                     <div class="swiper secSwiper">
+                       <div class="swiper-wrapper">
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-1.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-2.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-3.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-4.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-5.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-6.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-7.jpeg" />
+                         </div>
+                         <div class="swiper-slide">
+                           <img src="./img/sec5-8.jpeg" />
+                         </div>
+                         </div>
+                         <div class="swiper-pagination"></div>
+                        </div>
+                </div>
+                <div class="sec5-btm">
+                    <div class="sec5-btm-wrap">
+                        <a href="https://verrvui.com/board/product/list.html?board_no=4" target="_blank">
+                            <span>SEE MORE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top-ul-wrap">
+                    <ul class="info">
+                        <li class="info-name name">
+                            <ul>
+                                <span class="title">info</span>
+                                <li>company</li>
+                                <li>owner</li>
+                                <li>business number</li>
+                                <li>mail-order license</li>
+                            </ul>
+                        </li>
+                        <li class="info-detail detail">
+                            <ul>
+                                <li>주식회사 베르씨앤엠</li>
+                                <li>변다솔</li>
+                                <li>548-88-01912</li>
+                                <li>2020-부산부산진-1748호[사업자정보확인]</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="head">
+                        <div class="head-name name">
+                        <span class="title">office</span>
+                        <li>adress</li>
+                    </div>
+                    <div class="head-detail detail">
+                        <li>47245 부산광역시 부산진구 중앙대로756번길 10 (부전동) 202호</li>
+                    </div>
+                    </ul>
+                    <ul class="contact">
+                        <li class="contact-name name">
+                            <ul>
+                                <span class="title">contact</span>
+                                <li>Customer center </li>
+                                <li>account</li>
+                            </ul>
+                        </li>
+                        <li class="contact-detail detail">
+                            <ul>
+                                <li>070-7769-7777</li>
+                                <li>기업은행 091-193286-04-011</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <span>Copyright © 2020 베르뷔. All rights reserved.</span>
+                    <ul class="footer-bottom-ul">
+                        <li>
+                            <a href="#none">홈</a>
+                        </li>
+                        <li>
+                            <a href="#none">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="#none">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#none">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#none">이용안내</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

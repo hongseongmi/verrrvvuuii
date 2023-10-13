@@ -1,0 +1,94 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img,svg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+span{
+    font-family: "NotoSerifKR";
+}
+p{
+    font-family: "Pretendard";
+}
+
+/* notosansKR */
+@font-face {
+    font-family: "NotoSerifKR";
+    src: url(../font/Noto_Serif_KR/NotoSerifKR-Black.otf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: "NotoSerifKR";
+    src: url(../font/Noto_Serif_KR/NotoSerifKR-Bold.otf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "NotoSerifKR";
+    src: url(../font/Noto_Serif_KR/NotoSerifKR-SemiBold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "NotoSerifKR";
+    src: url(../font/Noto_Serif_KR/NotoSerifKR-Medium.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "NotoSerifKR";
+    src: url(../font/Noto_Serif_KR/NotoSerifKR-Regular.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "NotoSerifKR";
+    src: url(../font/Noto_Serif_KR/NotoSerifKR-Light.otf);
+    font-weight: 300;
+}
+
+/* pretendard */
+@font-face {
+    font-family: "Pretendard";
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-Black.otf);
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-Bold.otf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Pretendard";
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-ExtraBold.otf);
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-SemiBold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Pretendard";
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-Medium.otf);
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-Regular.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Pretendard";
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-ExtraLight.otf);
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-Light.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Pretendard";
+    src: url(../font/Pretendard-1.3.8/public/static/Pretendard-Thin.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Bigilla';
+    src: url(../font/bigilla/Bigilla-Bold.otf);
+    font-weight: 800;
+}
